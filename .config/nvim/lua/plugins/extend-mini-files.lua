@@ -6,7 +6,9 @@ return {
       use_as_default_explorer = true,
     },
     windows = {
-      width_preview = 100,
+      width_nofocus = 20,
+      width_focus = 50,
+      width_preview = 60,
     },
   },
   keys = {
