@@ -8,7 +8,7 @@ return {
     windows = {
       width_nofocus = 20,
       width_focus = 50,
-      width_preview = 60,
+      width_preview = 100,
     },
   },
   keys = {

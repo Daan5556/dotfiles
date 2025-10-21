@@ -1,0 +1,1 @@
+/home/daan/.config/omarchy/current/theme/neovim.lua
