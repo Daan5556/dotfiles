@@ -13,3 +13,12 @@ alias lazydotfiles='lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # Mise aliases
 alias mr='mise run'
+
+# pnpm
+alias pn=pnpm
+export PNPM_HOME="/home/daan/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
