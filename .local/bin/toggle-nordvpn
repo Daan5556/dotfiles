@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+if nordvpn status | grep -q "^Status: Connected"; then
+  output=$(nordvpn disconnect)
+  notify-send "$(echo "$output" | head --lines 1)"
+else
+  output=$(nordvpn connect)
+  notify-send "$(echo "$output" | tail --lines 1)"
+fi
+
