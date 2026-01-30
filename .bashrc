@@ -24,3 +24,8 @@ esac
 
 # icat
 alias icat="kitten icat"
+
+# completions
+for f in ~/.config/bash/completions/*; do
+  [ -r "$f" ] && source "$f"
+done
