@@ -32,3 +32,6 @@ done
 
 # copy alias
 alias copy=wl-copy
+
+# Rust
+. "$HOME/.cargo/env"
