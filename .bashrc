@@ -29,6 +29,7 @@ alias icat="kitten icat"
 for f in ~/.config/bash/completions/*; do
   [ -r "$f" ] && source "$f"
 done
+source <(espflash completions bash)
 
 # copy alias
 alias copy=wl-copy
