@@ -1,0 +1,12 @@
+{
+  "Console log": {
+    "prefix": "frontmatter",
+    "body": [
+      "**Author:** Daan Eggen  ",
+      "**Date:** $1  ",
+      "**Version:** 1.0",
+      "",
+      "---"
+    ]
+  }
+}
