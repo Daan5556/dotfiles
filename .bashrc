@@ -30,6 +30,7 @@ for f in ~/.config/bash/completions/*; do
   [ -r "$f" ] && source "$f"
 done
 source <(espflash completions bash)
+source <(gh completion  --shell bash)
 
 # copy alias
 alias copy=wl-copy
