@@ -5,7 +5,7 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
-. "$HOME/.local/share/../bin/env"
+. "$HOME/.local/bin/env"
 
 # Dotfiles aliases
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
@@ -29,11 +29,14 @@ alias icat="kitten icat"
 for f in ~/.config/bash/completions/*; do
   [ -r "$f" ] && source "$f"
 done
-source <(espflash completions bash)
 source <(gh completion  --shell bash)
 
 # copy alias
 alias copy=wl-copy
+
+# lazy tools
+alias lzd='lazydocker'
+alias lzg='lazydocker'
 
 # Rust
 . "$HOME/.cargo/env"
