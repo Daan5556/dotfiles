@@ -36,7 +36,7 @@ alias copy=wl-copy
 
 # lazy tools
 alias lzd='lazydocker'
-alias lzg='lazydocker'
+alias lzg='lazygit'
 
 # Rust
 . "$HOME/.cargo/env"
