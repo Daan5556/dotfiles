@@ -9,7 +9,6 @@
   "modules-center": [
     "clock#horizontal",
     "clock#vertical",
-    "custom/weather",
     "custom/update",
     "custom/voxtype",
     "custom/screenrecording-indicator",
