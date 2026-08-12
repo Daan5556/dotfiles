@@ -1,38 +1,29 @@
-require("hypr.bindings.media")
-require("hypr.bindings.tiling")
+-- Keep only your personal keybinding overrides here. Add new bindings or
+-- unbind defaults before replacing them.
 
--- Clipboard manager.
-hl.unbind("SUPER + C")
-hl.unbind("SUPER + V")
-hl.unbind("SUPER + X")
-o.bind("SUPER + V", "Walker clipboard", { omarchy = "walker -m clipboard" })
+-- See current bindings and descriptions:
+--   omarchy menu keybindings --print
 
--- Application bindings.
-o.bind("SUPER + RETURN", "Terminal", { omarchy = "terminal" })
-o.bind("SUPER + ALT + RETURN", "Tmux", { omarchy = "terminal-tmux" })
-o.bind("SUPER + SHIFT + RETURN", "Browser", { omarchy = "browser" })
-o.bind("SUPER + SHIFT + F", "File manager", { omarchy = "nautilus" })
-o.bind("SUPER + ALT + SHIFT + F", "File manager (cwd)", { omarchy = "nautilus-cwd" })
-o.bind("SUPER + SHIFT + B", "Browser", { omarchy = "browser" })
-o.bind("SUPER + SHIFT + ALT + B", "Browser (private)", { omarchy = "browser --private" })
-o.bind("SUPER + SHIFT + M", "Music", { omarchy = "or-focus spotify" })
-o.bind("SUPER + SHIFT + ALT + M", "Music TUI", { tui = "cliamp", focus = true })
-o.bind("SUPER + SHIFT + N", "Editor", { omarchy = "editor" })
-o.bind("SUPER + SHIFT + D", "Docker", { tui = "lazydocker" })
+-- To disable every Omarchy default binding, set this in
+-- ~/.config/hypr/hyprland.lua before require("default.hypr.omarchy"), then add
+-- only the bindings you want below:
+--   omarchy_default_bindings = false
 
--- Web app bindings.
-o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com" })
+-- To disable all preinstalled app/webapp bindings, set:
+--   omarchy_preinstalled_bindings = false
 
--- Add extra bindings below.
+-- Add a new binding.
 -- o.bind("SUPER + SHIFT + R", "SSH", "alacritty -e ssh your-server")
 
-o.bind("SUPER + SHIFT + S", "Screenshot of a region", "omarchy capture screenshot")
-
--- Overwrite existing bindings with hl.unbind() first if needed.
+-- Change an existing binding by unbinding it first, then binding the key again.
+-- This example changes SUPER+SPACE from the launcher to the Omarchy root menu.
 -- hl.unbind("SUPER + SPACE")
--- o.bind("SUPER + SPACE", "Omarchy menu", "omarchy-menu")
+-- o.bind("SUPER + SPACE", "Omarchy menu", "omarchy-menu toggle root")
+
+-- Disable a default binding without replacing it.
+-- hl.unbind("SUPER + SHIFT + B")
 
 -- Logitech MX Keys examples:
 -- o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot")
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
--- o.bind("SUPER + PERIOD", nil, { omarchy = "walker -m symbols" }
+-- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
