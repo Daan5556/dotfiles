@@ -29,4 +29,8 @@
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 
 -- Load personal binding groups.
-require("hypr.bindings.tiling")
+
+-- Per-monitor workspaces: SUPER+N acts on the focused monitor.
+-- Added by the Per-monitor Workspaces bar widget. pcall so that removing
+-- the plugin costs these bindings rather than everything below this line.
+pcall(dofile, os.getenv("HOME") .. "/.config/omarchy/plugins/mmsbrggr.per-monitor-workspaces/hypr/init.lua")
