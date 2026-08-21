@@ -34,3 +34,7 @@
 -- Added by the Per-monitor Workspaces bar widget. pcall so that removing
 -- the plugin costs these bindings rather than everything below this line.
 pcall(dofile, os.getenv("HOME") .. "/.config/omarchy/plugins/mmsbrggr.per-monitor-workspaces/hypr/init.lua")
+
+-- Screenshot alias
+hl.unbind("SUPER + SHIFT + S")
+o.bind("SUPER + SHIFT + S", "Screenshot of a region", "omarchy capture screenshot")
